@@ -20,6 +20,9 @@ const article = ({ article }) => {
 
 //HERE EITHER YOU CAN USE getServerSideProps      OR       u can use the combination of getStaticProps and getStaticPaths as it is a static site generated page
 
+
+// here the data is being fetched directly from the third party api
+
 // export const getServerSideProps = async (context) => {
 //   const res = await fetch(
 //     `https://jsonplaceholder.typicode.com/posts/${context.params.id}`
@@ -66,6 +69,8 @@ const article = ({ article }) => {
 //     fallback: false,
 //   };
 // };
+
+//This here is the request using our own nextjs rest-api in which we are fetching data locally from a data file in the root folder so not fetching data from a third party api unlike upward requests
 
 export const getStaticProps = async (context) => {
   const res = await fetch(`${server}/api/articles/${context.params.id}`);
