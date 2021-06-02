@@ -18,6 +18,8 @@ const article = ({ article }) => {
   );
 };
 
+//HERE EITHER YOU CAN USE getServerSideProps      OR       u can use the combination of getStaticProps and getStaticPaths as it is a static site generated page
+
 // export const getServerSideProps = async (context) => {
 //   const res = await fetch(
 //     `https://jsonplaceholder.typicode.com/posts/${context.params.id}`
